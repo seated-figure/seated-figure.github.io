@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">A Seated Figure's Blog</h1>
+      <h2 class="project-tagline">Michael Keating</h2>
+      <a href="https://amethyst.rs/" class="btn">Amethyst Game Engine</a>
+      <a href="mailto:kel@unclear.info" class="btn">Contact Me!</a>
+    </section>
+
+    <section class="main-content">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">My blog</a> is maintained by <a href="https://github.com/distransient">me</a>!</span>
+        <span class="site-footer-credits"><a href="mailto:kel@unclear.info">Email me</a> if you're interested in hiring me.</span>
+      </footer>
+    </section>
+  </body>
+</html>
