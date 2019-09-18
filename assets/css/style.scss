@@ -1,4 +1,8 @@
 ---
 ---
 
-@import 'jekyll-theme-kelmane';
+@import 'normalize', 'typography';
+
+.highlight { @import 'namespaces/syntax'; }
+.site { @import 'namespaces/site'; }
+.default { @import 'namespaces/default'; }

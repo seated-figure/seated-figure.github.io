@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin header {
+    color: $header-heading-color;
+    text-align: center;
+    background-color: $header-bg-color;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url('/assets/slurred.jpg');
+    background-size: cover;
+    text-shadow: 1px 1px 25px rgba(0,0,0,0.3);
+}

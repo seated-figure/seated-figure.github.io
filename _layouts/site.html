@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" 
+        href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+      {{ content }}
+
+      <footer class="site-foot">
+        <p class="site-foot-owner">
+            <a href="{{ site.github.repository_url }}">My blog</a> 
+            is maintained by <a href="{{ site.me.link }}">me</a>!
+        </p>
+        <p class="site-foot-credits">
+            <a href="mailto:{{ site.me.email }}">Email me</a> 
+            if you're interested in hiring me.
+        </p>
+      </footer>
+  </body>
+</html>

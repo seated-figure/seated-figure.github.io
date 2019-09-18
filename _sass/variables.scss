@@ -1,23 +1,33 @@
 // Breakpoints
-$large-breakpoint: 64em !default;
-$medium-breakpoint: 42em !default;
+$large-breakpoint: 64em;
+$medium-breakpoint: 42em;
 
 // Headers
-$header-heading-color: #fff !default;
-$header-bg-color: #0bf !default;
-$header-bg-color-secondary: #fd0 !default;
+$header-heading-color: #fff;
+$header-bg-color: #0bf;
+$header-bg-color-secondary: #fd0;
 
 // Text
-$section-headings-color: #159957 !default;
-$body-text-color: #606c71 !default;
-$body-link-color: #1e6bb8 !default;
-$blockquote-text-color: #819198 !default;
+$section-headings-color: #159957;
+$body-text-color: #606c71;
+$body-link-color: #1e6bb8;
+$blockquote-text-color: #819198;
 
 // Code
-$code-bg-color: #f3f6fa !default;
-$code-text-color: #567482 !default;
+$code-bg-color: #f3f6fa;
+$code-text-color: #567482;
 
 // Borders
-$border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
-$hr-border-color: #eff0f1 !default;
+$border-color: #dce6f0;
+$table-border-color: #e9ebec;
+$hr-border-color: #eff0f1;
+
+$coder-fonts: SFMono-Regular, Consolas, 
+    'Liberation Mono', Menlo, Courier, monospace;
+
+$fonts: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$body-font-size: 1.3em;
+$body-line-height: 1.5;
