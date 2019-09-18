@@ -1,13 +1,37 @@
-@import 'variables';
+@import 'variables', 'button';
 
 @mixin header {
-    color: $header-heading-color;
+    padding: 2em 1em;
+    padding: 20vh 1em 10vh;
+
     text-align: center;
+    text-shadow: 1px 1px 25px rgba(0,0,0,0.3);
+
+    color: $header-heading-color;
+
     background-color: $header-bg-color;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: 0 0;
     background-image: url('/assets/slurred.jpg');
     background-size: cover;
-    text-shadow: 1px 1px 25px rgba(0,0,0,0.3);
+
+    &-title {
+        margin-top: 0;  
+        margin-bottom: 0;  
+        color: $header-heading-color;
+    }
+
+    &-subtitle {
+        margin-top: 0;    
+        margin-bottom: 2rem;
+        color: $header-heading-color;
+        font-style: italic;
+    }
+
+    &-nav {
+        &-link {
+            @include button;
+        }
+    }
 }

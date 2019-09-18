@@ -1,8 +1,13 @@
 @import 'variables';
 
 &-foot {
-    padding-top: 2rem;
-    margin-top: 2rem;
+    max-width: $column-width;
+
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    
     border-top: solid 1px $hr-border-color;
     
     &-owner {

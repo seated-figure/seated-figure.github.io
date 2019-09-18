@@ -1,5 +1,15 @@
-@import 'mixins/header';
+@import 'variables', 'mixins/header';
 
 &-head {
     @include header;
+}
+
+&-content {
+    margin-top: 2rem;
+    padding: 2rem;
+    & > * { 
+        max-width: $column-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
