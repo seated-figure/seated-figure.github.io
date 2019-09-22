@@ -1,0 +1,22 @@
+@import 'mixins/column', 'mixins/header';
+
+&-head {
+    @include header;
+    &-nav-title {
+        font-style: italic;
+        display: inline-block;
+        margin-right: 1em;
+    }
+}
+
+&-content {
+    @include column;
+    margin-top: 2em;
+
+    &-tags {
+        text-align: right;
+        &-link {
+            margin-left: 1em;
+        }
+    }
+}

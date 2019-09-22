@@ -1,34 +1,66 @@
-// Breakpoints
-$large-breakpoint: 64em;
-$medium-breakpoint: 42em;
-$column-width: 45rem;
+@import 'palette';
 
-// Headers
-$header-heading-color: #fff;
-$header-bg-color: #0bf;
-$header-bg-color-secondary: #fd0;
+///
+/// Globals: Variables for use in any module.
+///
 
-// Text
-$section-headings-color: #159957;
-$body-text-color: #606c71;
-$body-link-color: #1e6bb8;
-$blockquote-text-color: #819198;
+$global-column-width: 45rem;
 
-// Code
-$code-bg-color: #f3f6fa;
-$code-text-color: #567482;
 
-// Borders
-$border-color: #dce6f0;
-$table-border-color: #e9ebec;
-$hr-border-color: #eff0f1;
+///
+/// Universals: Variables for modules that affect all elements on a page.
+///
 
-$coder-fonts: SFMono-Regular, Consolas, 
-    'Liberation Mono', Menlo, Courier, monospace;
-
-$fonts: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+// Universals - Typography
+$typography-body-text-color: $palette-foreground;
+$typography-body-line-height: 1.5;
+$typography-body-font-size: 1.3em;
+$typography-body-font: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
     'Segoe UI Emoji', 'Segoe UI Symbol';
 
-$body-font-size: 1.3em;
-$body-line-height: 1.5;
+$typography-code-font: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, 
+    monospace;
+
+$typography-link-color: $palette-clickable;
+$typography-heading-color: $palette-highlight-primary;
+
+$typography-code-text-color: #567482;
+$typography-code-bg-color: #f3f6fa;
+$typography-code-border-color: #dce6f0;
+
+$typography-blockquote-text-color: $palette-foreground;
+$typography-blockquote-border-color: $palette-foreground;
+
+$typography-table-border-color: $palette-foreground-lightened;
+$typography-hr-border-color: $palette-foreground-lightened;
+
+
+///
+/// Mixins: Variables used in Mixin modules.
+///
+
+// Mixins - Headers
+$header-heading-color: $palette-inverted-foreground;
+$header-subtitle-color: transparentize($palette-inverted-foreground, 0.3);
+$header-bg-color: $palette-inverted-background;
+$header-bg-image-default: url('/assets/default-background.jpg');
+
+
+///
+/// Namespaces: Variables used in a namespaced module.
+///
+
+// Namespaces - Highlight
+$highlight-background-color: $palette-background-darkened;
+$highlight-foreground-color: $palette-foreground;
+$highlight-emphasis-color: $palette-foreground-darkened;
+$highlight-primary-color: $palette-highlight-primary;
+$highlight-secondary-color: $palette-highlight-secondary;
+
+// Namespaces - Index
+$index-post-hr-color: $palette-foreground-lightened;
+
+// Namespaces - Site
+$site-background: $palette-background;
+$site-foot-hr-color: $palette-foreground-lightened;

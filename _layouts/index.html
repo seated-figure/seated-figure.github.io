@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<nav class="index"> 
+    <h3 class="index-title">Posts</h3>
+    {% for post in site.posts %}
+        <section class="index-post">
+            <h4 class="index-post-title">
+                <a class="index-post-title-link" href="{{ post.url }}">{{ post.title }}</a>
+            </h4>
+            <p class="index-post-description">{{ post.description }}</p>
+            <footer class="index-post-info">
+                <time datetime="{{ post.date | date_to_xmlschema }}" class="index-post-info-date">{{ post.date | date_to_string: "ordinal", "US" }}</time>
+                <nav class="index-post-info-tags">
+                    Tags:
+                    {% for tag in post.tags %}
+                    <a class="index-post-info-tags-link" href="/tags/{{ tag | slugify | downcase }}">{{ tag }}</a>
+                    {% endfor %}
+                </nav>
+            </footer>
+        </a>
+    {% endfor %}
+</nav>

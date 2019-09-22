@@ -1,0 +1,13 @@
+// Color palette used through variables module
+
+$palette-background: #fee;
+$palette-background-darkened: #eee;
+$palette-foreground-lightened: #dcd;
+$palette-foreground: #455;
+$palette-foreground-darkened: #133;
+$palette-clickable: #b3c;
+$palette-highlight-primary: #e94;
+$palette-highlight-secondary: #83c;
+
+$palette-inverted-foreground: $palette-background;
+$palette-inverted-background: $palette-foreground;

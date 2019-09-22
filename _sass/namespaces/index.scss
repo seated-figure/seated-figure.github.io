@@ -1,0 +1,36 @@
+// `.index` namespace for the template `index.html`
+@import 'variables';
+
+& {
+    display: block;
+}
+
+&-title {
+
+}
+
+&-post {
+    border-top: 1px solid $index-post-hr-color;
+
+    &-title {
+        &-link {
+
+        }
+    }
+
+    &-description {
+
+    }
+
+    &-info {
+        &-date {
+            
+        }
+
+        &-tags {
+            &-link {
+
+            }
+        }
+    }
+}

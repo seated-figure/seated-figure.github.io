@@ -1,32 +1,38 @@
-@import 'variables', 'button';
+@import 'variables', 'button', 'mixins/column';
 
 @mixin header {
+    @include column; 
+    
+    color: $header-heading-color;
+    background-color: $header-bg-color;
+    background-image: $header-bg-image-default;
+
     padding: 2em 1em;
     padding: 20vh 1em 10vh;
 
     text-align: center;
     text-shadow: 1px 1px 25px rgba(0,0,0,0.3);
 
-    color: $header-heading-color;
-
-    background-color: $header-bg-color;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0 0;
-    background-image: url('/assets/slurred.jpg');
     background-size: cover;
 
     &-title {
+        color: $header-heading-color;
+
+        font-size: 2em;
         margin-top: 0;  
         margin-bottom: 0;  
-        color: $header-heading-color;
     }
 
     &-subtitle {
+        color: $header-subtitle-color;
+        
+        font-size: 1em;
+        font-style: italic;
         margin-top: 0;    
         margin-bottom: 2rem;
-        color: $header-heading-color;
-        font-style: italic;
     }
 
     &-nav {

@@ -1,22 +1,21 @@
-@import 'variables';
+// `.site` namespace for the base template `site.html`
+
+@import 'variables', 'mixins/column';
+
+& {
+    background: $site-background;
+}
 
 &-foot {
-    max-width: $column-width;
+    @include column;
 
-    padding: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 2rem 2rem;
     margin-bottom: 2rem;
     
-    border-top: solid 1px $hr-border-color;
-    
     &-owner {
-        display: block;
+        border-top: solid 1px $site-foot-hr-color;
+        padding-top: 2rem;
         font-weight: bold;
-    }
-    
-    &-credits {
-        color: $blockquote-text-color;
     }
 }
 

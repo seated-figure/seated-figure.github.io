@@ -2,20 +2,18 @@
 layout: site
 ---
 
-<header class="post-head" style="background-image: url('{{ post.head-image }}')">
-    <h1 class="post-head-title">{{ post.title }}</h1>
-    <h2 class="post-head-subtitle">{{ post.description }}</h2>
-    <nav class="post-head-nav">
-        {% for link in post.tags %}
-        <a href="{{ link.href }}" class="default-head-nav-link">{{ link.text }}</a>
+<header class="post-head" style="background-image: url('{{ post.head-image | default: '/assets/default-background.jpg' }}')">
+    <h1 class="post-head-title">{{ page.title }}</h1>
+    <h2 class="post-head-subtitle">{{ page.description }}</h2>
+    <a class="post-head-return" href="/">Return to index</a>
+</header>
+
+<section class="post-content">
+    <nav class="post-content-tags">
+        Tagged...
+        {% for tag in page.tags %}
+        <a class="post-content-tags-link" href="/tags/{{ tag | slugify | downcase }}">{{ tag }}</a>
         {% endfor %}
     </nav>
-</header>
-
-<header class="post-head">
-    <a class="post-head-return" href="/">Return to index</a>
-    <h1 class="post-head-">{{ page.title }}</h1>
-</header>
-
-
-{{ content }}
+    {{ content }}
+</section>  
