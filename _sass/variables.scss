@@ -23,14 +23,14 @@ $typography-code-font: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Couri
     monospace;
 
 $typography-link-color: $palette-clickable;
-$typography-heading-color: $palette-highlight-primary;
+$typography-heading-color: $palette-highlight-secondary;
 
-$typography-code-text-color: #567482;
-$typography-code-bg-color: #f3f6fa;
-$typography-code-border-color: #dce6f0;
+$typography-code-text-color: $palette-foreground;
+$typography-code-bg-color: $palette-background-darkened;
+$typography-code-border-color: $palette-foreground-lightened;
 
 $typography-blockquote-text-color: $palette-foreground;
-$typography-blockquote-border-color: $palette-foreground;
+$typography-blockquote-border-color: $palette-highlight-primary;
 
 $typography-table-border-color: $palette-foreground-lightened;
 $typography-hr-border-color: $palette-foreground-lightened;
@@ -40,9 +40,15 @@ $typography-hr-border-color: $palette-foreground-lightened;
 /// Mixins: Variables used in Mixin modules.
 ///
 
+// Mixins - Buttons
+$button-foreground: $palette-inverted-foreground;
+$button-background: transparentize($palette-inverted-background, 0.8); // $palette-inverted-background;
+$button-border: transparentize($palette-inverted-foreground, 0.3); // transparentize($palette-inverted-foreground;
+$button-background-focus: scale-color($palette-inverted-foreground, $lightness: -25%, $saturation: -80%, $alpha: -80%); // transparentize(darken($palette-inverted-foreground, 25%), 0.7);
+
 // Mixins - Headers
 $header-heading-color: $palette-inverted-foreground;
-$header-subtitle-color: transparentize($palette-inverted-foreground, 0.3);
+$header-subtitle-color: transparentize($palette-inverted-foreground, 0.1);
 $header-bg-color: $palette-inverted-background;
 $header-bg-image-default: url('/assets/default-background.jpg');
 

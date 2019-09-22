@@ -1,7 +1,11 @@
 @mixin column {
     & > * { 
-        max-width: $global-column-width;
-        margin-left: auto;
-        margin-right: auto;
+        @include column-internal;
     }
+}
+
+@mixin column-internal {
+    max-width: $global-column-width;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -3,34 +3,10 @@
 
 & {
     display: block;
-}
-
-&-title {
-
+    margin-top: 4rem;
 }
 
 &-post {
     border-top: 1px solid $index-post-hr-color;
-
-    &-title {
-        &-link {
-
-        }
-    }
-
-    &-description {
-
-    }
-
-    &-info {
-        &-date {
-            
-        }
-
-        &-tags {
-            &-link {
-
-            }
-        }
-    }
+    margin-bottom: 2rem;
 }

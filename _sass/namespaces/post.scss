@@ -1,11 +1,15 @@
-@import 'mixins/column', 'mixins/header';
+@import 'mixins/button', 'mixins/column', 'mixins/header';
 
 &-head {
     @include header;
-    &-nav-title {
-        font-style: italic;
-        display: inline-block;
-        margin-right: 1em;
+
+    position: relative;
+
+    &-return {
+        @include button;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }
 
@@ -14,9 +18,25 @@
     margin-top: 2em;
 
     &-tags {
+        font-size: 0.9em;
         text-align: right;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+        
         &-link {
             margin-left: 1em;
         }
     }
+}
+
+&-return {
+    font-size: 0.9em;
+    display: block;
+    margin-top: 4rem;
+    text-align: right;
+    @include column-internal;
 }
